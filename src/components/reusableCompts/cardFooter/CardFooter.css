@@ -1,0 +1,17 @@
+.visitors-info {
+    color: #21b8f9;
+    cursor: pointer;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.config-link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px !important;
+    text-decoration-line: underline;
+    color: #21b8f9;
+    cursor: pointer;
+}

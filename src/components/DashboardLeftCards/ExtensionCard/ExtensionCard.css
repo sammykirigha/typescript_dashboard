@@ -1,0 +1,108 @@
+.exten-card {
+    max-height: 343px;
+	max-width: 500px;
+    min-width: 350px;
+    padding: 20px;
+}
+
+.config-header-box {
+    display: flex;
+    align-items: center;
+}
+
+.config-header {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    line-height: 25px !important;
+    display: flex;
+    align-items: center;
+    color: #103b66;
+}
+
+.config-add-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.exten-card {
+	max-height: 343px;
+	max-width: 408px !important;
+}
+
+
+.exten-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.exten-box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exten-icon {
+    width: 175px;
+    height: 200px;
+    background: #ffa26b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extension-icon {
+    color: #ffffff;
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.exten-icon2 {
+    width: 175px;
+    height: 200px;
+    background: #00c48c;
+    border-radius: 10px;
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exten-text {
+	padding-top: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px !important;
+    line-height: 20px !important;
+    color: #103b66 !important;
+}
+
+.extension-icon-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 34px !important;
+    line-height: 39px !important;
+    text-align: center;
+    color: #ffffff;
+}
+
+.links {
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+	font-family:  Roboto;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	text-decoration-line: underline;
+	color: #21B8F9;
+	cursor: pointer;
+}

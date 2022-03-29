@@ -1,0 +1,25 @@
+.box {
+display: flex;
+align-items: center;
+}
+
+.config-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #103b66;
+}
+
+
+
+
+
+
+
+
+
+

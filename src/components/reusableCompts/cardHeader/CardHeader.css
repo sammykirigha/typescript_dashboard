@@ -1,0 +1,23 @@
+.card-content1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content-span1 {
+    margin-left: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    line-height: 25px;
+    display: flex;
+    /* align-items: center; */
+    color: #103b66;
+}

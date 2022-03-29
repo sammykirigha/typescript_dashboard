@@ -1,0 +1,41 @@
+
+.listitem-box {
+ margin-bottom: 3px;
+}
+
+.listitem{
+    cursor: pointer;
+
+}
+
+.icon {
+	color: #103B66 !important;
+}
+
+.listitem-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    padding-right: 3px;
+    line-height: 16px;
+    color: #21B8F9;
+}
+
+.listitem:hover {
+    border-left: 5px solid #21B8F9;
+	background-color: #F7F7F7;
+} 
+
+.listitem-text:hover {
+	color: #21B8F9;
+}
+
+.icon:hover  {
+	color: #21B8F9;
+}
+
+
+
+
+

@@ -1,0 +1,29 @@
+.carousel {
+  overflow: hidden;
+  /* background-color: aquamarine; */
+  margin-top: 15px;
+}
+
+.inner {
+ white-space: nowrap;
+ transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+}
+.indicators > button {
+    margin: 5px;
+}
+
+.indicators > button.active {
+    background-color: green;
+    color: #fff;
+}

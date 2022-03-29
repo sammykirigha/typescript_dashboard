@@ -1,0 +1,16 @@
+.third-card-box{
+	padding: 10px;
+	max-height: 232px;
+	max-width: 408px;
+	padding-left: 23px !important;
+}
+
+.invite-paragraph {
+    margin: 20px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px !important;
+    line-height: 22px !important;
+    color: #103b66;
+}

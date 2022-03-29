@@ -1,0 +1,61 @@
+.second-card {
+padding: 10px;
+max-height: 232px;
+max-width: 408px;
+background-color: #000032 !important;
+}
+
+.box-card {
+ margin-top: 15px;
+ padding: 20px;
+ width: 90%;
+}
+
+
+.trust-paragraph {
+    font-family: 'Noto Sans HK';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px !important;
+    line-height: 22px !important;
+    color: #ffffff;
+	padding-top: 10px !important;
+    padding: 0px 15px;
+    width: 97%;
+}
+
+.trust-link {
+    padding: 20px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px !important;
+    line-height: 20px !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #00c48c;
+    cursor: pointer;
+}
+
+.footer-icon {
+	height: 20px;
+	width: 25px;
+	margin-left: 7px;
+}
+
+.box-head {
+display: flex;
+align-items: center;
+padding-left: 8px;
+}
+
+.link-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    line-height: 27px;
+    color: white;
+}

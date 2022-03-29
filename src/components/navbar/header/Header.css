@@ -1,0 +1,33 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+	width: 100%;
+}
+
+.title {
+font-family: Robot;
+font-style: normal;
+font-weight: 500;
+font-size: 20px !important;
+line-height: 22px;
+color: #103B66;
+text-transform: capitalize;
+}
+
+.link {
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px !important;
+line-height: 20px;
+text-align: right;
+color: #103B66;
+text-decoration: none;
+}
+
+.header-left {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

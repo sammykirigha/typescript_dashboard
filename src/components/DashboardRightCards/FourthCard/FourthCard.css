@@ -1,0 +1,58 @@
+.fourth-card-box{
+	padding: 10px;
+	max-height: 200px;
+	max-width: 500px;
+	min-width: 350px;
+	padding-left: 21px !important;
+}
+
+
+.div {
+	margin: 10px 0px;
+	/* padding: 10px */
+}
+
+.config-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #103b66;
+}
+
+.customer-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.customerText {
+font-family: Roboto ;
+font-style: normal;
+font-weight: 400 ;
+font-size: 15px ;
+line-height: 24px;
+padding-left: 15px;
+color: #103B66 ;
+display: flex;
+align-items: center;
+}
+
+.customer-button {
+    width: 160px;
+    height: 50px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px !important;
+    background: #21b8f9;
+    outline: 0 !important;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}

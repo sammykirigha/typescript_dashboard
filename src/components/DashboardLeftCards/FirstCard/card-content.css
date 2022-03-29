@@ -1,0 +1,27 @@
+.card-content-box {
+    padding: 10px;
+    max-height: 220px;
+    max-width: 500px;
+    min-width: 350px;
+}
+
+/* .icon {
+    width: 23px;
+    height: 23px;
+    color: #103b66;
+} */
+
+.visitors-number {
+    padding-top: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px !important;
+    display: flex;
+    color: #103b66;
+}
+
+.footer-icon {
+    width: 18px;
+    margin-left: 5px;
+}

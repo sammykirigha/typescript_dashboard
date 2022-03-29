@@ -1,0 +1,100 @@
+.news-box {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-icon {
+    margin-right: 10px;
+    color: #103b66;
+    height: 23px;
+}
+
+.news-text1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px !important;
+    display: flex;
+    align-items: center;
+    color: #103b66;
+}
+
+.news-text2 {
+    margin-right: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px !important;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #21b8f9;
+    cursor: pointer;
+}
+
+.news-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.news-image {
+    height: 100px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.news-info {
+    cursor: pointer;
+    margin-left: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* padding: 20px 0px; */
+}
+
+.news-h6 {
+    font-family: Roboto;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    color: #21b8f9;
+}
+
+.news-paragraph {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    color: #103b66 !important;
+}
+
+.news-link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300 !important;
+    font-size: 12 !important;
+    text-decoration-line: underline;
+    color: #103b66;
+}
