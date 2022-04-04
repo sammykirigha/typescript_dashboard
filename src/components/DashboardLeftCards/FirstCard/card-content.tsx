@@ -62,7 +62,7 @@ export const CardContent:React.FC = (): JSX.Element => {
 		  </CardBody>
 		  <CardFooter
 			  footerIcon={
-				  <ArrowForwardOutlinedIcon className="footer-icon" />
+				  <ArrowForwardOutlinedIcon style={{marginLeft: '40px'}} className="footer-icon" />
 			  }
 			  linkText={"You need more visits? Contact us!"}
 		  />

@@ -42,36 +42,21 @@ interface OtherLinks {
         icon: <ShoppingCartOutlinedIcon />,
         text: "Catalogue",
         link: "/admin/catalogue",
-        children: [
-            {
-                text: "Discount codes",
-                link: "/admin/marketing/discount" 
-            },
-            {
-                text:"Exit intent",
-                link: "/admin/marketing/intent" 
-            },
-            {
-                text:"Checkout Features",
-                link: "/admin/marketing/features" 
-            },
-            {
-                text:"Post-purchase conversion",
-                link: "/admin/marketing/conversion" 
-            },
-            {
-                text:"Cart abandonment",
-                link: "/admin/marketing/abandonment"
-            },
-            {
-                text:"Timer checkout",
-                link: "/admin/marketing/checkout"
-            },
-            { 
-                text:"Sell on Social",
-                link: "/admin/marketing/social" 
-            }
-        ]
+        // children: [
+        //     {
+        //         text: "Discount codes",
+        //         link: "/admin/marketing/discount" 
+        //     },
+        //     {
+        //         text:"Exit intent",
+        //         link: "/admin/marketing/intent" 
+        //     },
+        //     {
+        //         text:"Checkout Features",
+        //         link: "/admin/marketing/features" 
+        //     },
+            
+        // ]
     },
     {
         icon: <FormatListBulletedIcon />,
@@ -88,44 +73,28 @@ interface OtherLinks {
         icon: <WifiTetheringIcon />,
         text: "Marketing",
         link:"/admin/marketing",
-        children:[
-            {
-                text: "Discount codes",
-                link: "/admin/marketing/discount" 
-            },
-            {
-                text:"Exit intent",
-                link: "/admin/marketing/intent" 
-            },
-            {
-                text:"Checkout Features",
-                link: "/admin/marketing/features" 
-            },
-            {
-                text:"Post-purchase conversion",
-                link: "/admin/marketing/conversion" 
-            },
-            {
-                text:"Cart abandonment",
-                link: "/admin/marketing/abandonment"
-            },
-            {
-                text:"Timer checkout",
-                link: "/admin/marketing/checkout"
-            },
-            { 
-                text:"Sell on Social",
-                link: "/admin/marketing/social" 
-            },
-            {
-                text:"Special Offer",
-                link: "/admin/marketing/specialOffer"
-            },
-            {
-                text:"Seasonal Offer",
-                link: "/admin/marketing/seasonalOffers" 
-           },
-        ]
+        // children:[
+        //     {
+        //         text: "Discount codes",
+        //         link: "/admin/marketing/discount" 
+        //     },
+        //     {
+        //         text:"Exit intent",
+        //         link: "/admin/marketing/intent" 
+        //     },
+        //     {
+        //         text:"Checkout Features",
+        //         link: "/admin/marketing/features" 
+        //     },
+        //     {
+        //         text:"Post-purchase conversion",
+        //         link: "/admin/marketing/conversion" 
+        //     },
+        //     {
+        //         text:"Cart abandonment",
+        //         link: "/admin/marketing/abandonment"
+        //     },
+        // ]
     },
     {
         icon: <LocalShippingIcon />,

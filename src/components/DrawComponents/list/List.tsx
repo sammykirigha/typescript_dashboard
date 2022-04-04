@@ -48,18 +48,18 @@ interface Link {
 
 const renderRouteLinks = (
     links:any,
-    navigate: (link: string) => void
+    navigate: (link: string) => void,
 ): JSX.Element => (
     <>
         {links.map(({ text, icon, badge, link, children }: Link) => {
-            if (children?.length > 0) {
+            if ( children?.length > 0 ) {
                 return (
                     <Accordion
                         disableGutters={true}
-                        sx={{ paddingTop: 0, marginTop: 0, }}
+                        sx={{ paddingTop: 0, marginTop: 0, backgroundColor: 'red', border: 'none'  }}
                     >
                         <AccordionSummary
-                            sx={{ paddingTop: 0, marginTop: 0 }}
+                            sx={{ paddingTop: 0, marginTop: 0, backgroundColor: 'green'}}
                             style={{ marginLeft: "-17px" }}
                         >
                             <ListItem onClick={() => navigate(link)} style={{width: '100%'}}>
@@ -74,7 +74,7 @@ const renderRouteLinks = (
                             <div className="accord-list-box">
                                 {children.map((child) => (
                                     <ListItemText
-                                        style={{cursor: 'pointer'}}
+                                        style={{cursor: 'pointer', paddingTop: '8px'}}
                                         onClick={() => navigate(child.link)}
                                         secondary={child.text}
                                     ></ListItemText>

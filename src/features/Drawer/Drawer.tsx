@@ -1,19 +1,43 @@
 import { Box, CssBaseline } from '@mui/material';
-import { styled, } from '@mui/material/styles';
+import { styled, Theme, CSSObject } from '@mui/material/styles';
 import React from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
 import MuiAppBar, { AppBarProps as MuiAppBarProps} from '@mui/material/AppBar';
 import {
-    Drawer,
     IconButton,
     Slide,
     Toolbar,
-    useScrollTrigger,
+	useScrollTrigger,
+	useTheme
 } from "@mui/material";
+import  MuiDrawer from "@mui/material/Drawer";
 import { Header } from '../../components/navbar/header/Header';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { ListContainer } from '../../components/DrawComponents/list/List';
 
 const drawerWidth = 240;
+
+const openedMixin = (theme: Theme): CSSObject => ({
+	width: drawerWidth,
+	transition: theme.transitions.create('width', {
+		easing: theme.transitions.easing.sharp,
+		duration: theme.transitions.duration.enteringScreen,
+	}),
+	overflowX: 'hidden'
+})
+
+const closedMixin = (theme: Theme): CSSObject => ({
+	transition: theme.transitions.create('width', {
+		easing: theme.transitions.easing.sharp,
+		duration: theme.transitions.duration.leavingScreen,
+	}),
+	overflowX: 'hidden',
+	width: `calc(${theme.spacing(17)} + 1px)`,
+	[theme.breakpoints.up('sm')]: {
+		width: `calc(${theme.spacing(9.5)} + 1px)`
+	}
+})
 
 interface ChildrenProps  { 
     children: React.ReactElement
@@ -60,6 +84,23 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
+const Drawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== 'open'})(
+	({ theme, open }) => ({
+		width: drawerWidth,
+		flexShrink: 0,
+		whiteSpace: 'nowrap',
+		boxSizing: 'border-box',
+		...(open && {
+			...openedMixin(theme),
+			'& .MuiDrawer-paper': openedMixin(theme)
+		}),
+		...(!open && {
+			...closedMixin(theme),
+			'& .MuiDrawer-paper': closedMixin(theme)
+		}),
+	}),
+)
+
 const Main = styled("main", {
 	shouldForwardProp: (prop) => prop !== "open"
 })<AppBarProps>(
@@ -87,7 +128,8 @@ const drawerStyles = {
     justifyContent: "center",
 };
 
-export const TheDrawer: React.FC<ChildrenProps> = ({children}): JSX.Element => {
+export const TheDrawer: React.FC<ChildrenProps> = ({ children }): JSX.Element => {
+	const theme = useTheme();
 	const [open, setOpen] = React.useState(false);
 	const handleDrawerOpen = (): void => {
 		setOpen(true)
@@ -99,7 +141,7 @@ export const TheDrawer: React.FC<ChildrenProps> = ({children}): JSX.Element => {
   return (
 	  <Box style={drawerStyles}>
 		  <CssBaseline />
-		  <HideOnScroll>
+		  {/* <HideOnScroll> */}
 			  <AppBar position='fixed' open={open}>
 				  <Toolbar>
 					  <IconButton
@@ -114,27 +156,14 @@ export const TheDrawer: React.FC<ChildrenProps> = ({children}): JSX.Element => {
 					  <Header title={"Dashboard"} linkText={"What's new"} />
 				  </Toolbar>
 			  </AppBar>
-		  </HideOnScroll>
-		  <Drawer
-			  sx={{
-				  width: drawerWidth,
-				  flexShrink: 0,
-				  "& .MuiDrawer-paper": {
-					  width: drawerWidth,
-					  boxSizing: "border-box"
-				  }
-			  }}
-			  variant='persistent'
-			  anchor='left'
-			  open={open}
-		  >
-			  
+		  {/* </HideOnScroll> */}
+		  <Drawer variant='permanent' open={open}>
             <ListContainer handleDrawerClick={handleDrawerClose} />
 		  </Drawer>
-		  <Main open={open}>
+		  <Box component="main" sx={{ flexGrow: 1, p: 0 }}>
 			  <DrawerHeader />
 			  {children}
-		  </Main>
+		  </Box>
 	</Box>
   )
 }
