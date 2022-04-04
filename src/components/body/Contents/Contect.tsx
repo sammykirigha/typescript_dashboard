@@ -38,7 +38,7 @@ const DashboardContainer = styled(Box)(({ theme }) => ({
 	display: "flex",
     width: "100%",
     gap: "10px",
-    padding: '10px',
+    padding: '20px',
     transform: "translateY(-30px)",
     flexDirection: "column",
 	alignItems: "flex-start",

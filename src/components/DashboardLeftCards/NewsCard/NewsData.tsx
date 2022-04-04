@@ -1,9 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import './NewsCard.css';
 import React, { useEffect, useState } from 'react';
-import { useMakeRequestHook } from '../../../hooks/MakeRequest';
-import { log } from 'console';
 import axios from 'axios';
+import { Spinner } from '../../reusableCompts';
 
 interface Data {
 	author: string;
@@ -30,6 +29,7 @@ const truncateString = (str: string, num: number): string => {
 
 export const NewsData: React.FC = (): JSX.Element => {
     const [data, setData] = useState<Data[]>([])
+    const [loading, setLoading] = useState<boolean>(true)
 
 	const fetchData = async () => {
 		let res = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=9ae8144540384a17b86d7f1cf87e35ab`)
@@ -42,9 +42,18 @@ export const NewsData: React.FC = (): JSX.Element => {
 		const results = fetchData()
 		results.then(function (data) {
 			setData(data)
-		})
+        setLoading(false)
+        })
 	},[])
-	const _news = data.slice(0, 8);
+    const _news = data.slice(0, 8);
+    
+    if (loading) {
+        return (
+            <div>
+               <Spinner />
+            </div>
+        )
+    }
 
   return (
 	<>
