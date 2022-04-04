@@ -46,6 +46,11 @@ interface Link {
 	}[]
 }
 
+const listItem = {
+    color: "#103B66",
+    marginLeft: '0px' 
+}
+
 const renderRouteLinks = (
     links:any,
     navigate: (link: string) => void,
@@ -56,17 +61,15 @@ const renderRouteLinks = (
                 return (
                     <Accordion
                         disableGutters={true}
-                        sx={{ paddingTop: 0, marginTop: 0, backgroundColor: 'red', border: 'none'  }}
                     >
                         <AccordionSummary
-                            sx={{ paddingTop: 0, marginTop: 0, backgroundColor: 'green'}}
                             style={{ marginLeft: "-17px" }}
                         >
                             <ListItem onClick={() => navigate(link)} style={{width: '100%'}}>
-                                <ListItemIcon style={{ color: "#103B66", marginLeft: '0px' }}>
+                                <ListItemIcon style={listItem}>
                                     <WifiTetheringIcon />
                                 </ListItemIcon>
-                                <ListItemText sx={{fontSize: 14}} secondaryTypographyProps={{style: textColor}} secondary={text} />
+                                <ListItemText  secondaryTypographyProps={{style: textColor}} secondary={text} />
                                 <ArrowDropDownIcon />
                             </ListItem>
                         </AccordionSummary>

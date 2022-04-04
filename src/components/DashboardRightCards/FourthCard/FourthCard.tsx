@@ -28,7 +28,7 @@ export const FourthCard:React.FC = ():JSX.Element => {
             <Box className="customer-box">
                 <Avatar alt="Sammy" src={image1} />
                 <Typography component="span" className="customerText">
-                    Simone is here to help you. Feel free to ask!!!
+                    Simone is here to help you. Feel free to ask him
                 </Typography>
             </Box>
             <div className="div">
