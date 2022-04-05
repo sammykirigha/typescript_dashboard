@@ -94,7 +94,7 @@
 }
 
 .links {
-	margin-top: 25px;
+	margin-top: 10px !important;
 	display: flex;
 	align-items: center;
 	font-family:  Roboto;
@@ -104,4 +104,5 @@
 	text-decoration-line: underline;
 	color: #21B8F9;
 	cursor: pointer;
+    /* background-color: red; */
 }

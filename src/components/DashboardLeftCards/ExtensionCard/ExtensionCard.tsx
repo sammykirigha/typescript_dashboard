@@ -13,7 +13,8 @@ const iconStyle = {
 }
 
 const footerBox = {
-    marginTop: '10px'
+    marginBottom: '10px',
+    // backgroundColor: 'red'
 }
 
 export const ExtensionCard:React.FC = (): JSX.Element => {
