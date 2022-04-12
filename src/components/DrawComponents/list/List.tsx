@@ -31,7 +31,7 @@ fontStyle: 'normal',
 fontWeight: 400,
 fontSize: '14px',
 lineHeight: '16px',
-color: '#103B66'
+color: '#103B66',
 
 }
 
@@ -66,7 +66,9 @@ const renderRouteLinks = (
                             style={{ marginLeft: "-17px" }}
                         >
                             <ListItem onClick={() => navigate(link)} style={{width: '100%'}}>
-                                <ListItemIcon style={listItem}>
+                                <ListItemIcon
+                                    sx={{minWidth: (theme) => theme.spacing(4)}}
+                                    style={listItem}>
                                     <WifiTetheringIcon />
                                 </ListItemIcon>
                                 <ListItemText  secondaryTypographyProps={{style: textColor}} secondary={text} />

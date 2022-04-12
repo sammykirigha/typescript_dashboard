@@ -34,7 +34,9 @@ export const SelectItems: React.FC = (): JSX.Element => {
 				  input={<OutlinedInput label="Name" />}
 				  sx={{
 					  outline: '0px',
-					  border: '0px'
+					  border: 'GrayText',
+					//   backgroundColor: 'red',
+					//   borderColor: 'red'
 				  }}
 			  >
 				  {names.map((name) => (

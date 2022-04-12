@@ -5,11 +5,13 @@
 
 .listitem{
     cursor: pointer;
-
+    /* background-color: red; */
 }
 
 .icon {
 	color: #103B66 !important;
+    padding: 0px;
+    margin: 0px;
 }
 
 .listitem-text {

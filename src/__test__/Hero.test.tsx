@@ -3,8 +3,10 @@ import * as ReactDOM from 'react-dom';
 import React from 'react';
 
 describe.skip('Hero component test', () => {
+	
 	let container: HTMLDivElement;
 	const setup = () => ReactDOM.render(<Hero />, container);
+
 	beforeEach(() => {
 		container = document.createElement('div');
 		document.body.appendChild(container);

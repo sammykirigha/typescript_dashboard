@@ -77,7 +77,6 @@ const DashLeftInnerCards = styled(Box)(() => ({
     flex: 2,
     display: "grid",
     gridTemplateColumns: "repeat(2, 1fr)",
-    height: '100vh'
 }));
 
 const DashLeftInner = styled(Box)(() => ({

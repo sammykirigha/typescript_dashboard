@@ -5,12 +5,11 @@ import { CardContent, CardContentTwo, NewsHeader } from '../components/Dashboard
 
 describe('<Content />', () => {
 	beforeAll(() => {
-		console.log('Running before all test');
-		
+	  console.log('Running before all test');
 	})
  
 	afterEach(cleanup);
-	
+
 	it('renders first card with correct text', () => {
 		render(<CardContent />)
 		let element = screen.getByText('Visitors');
@@ -20,14 +19,14 @@ describe('<Content />', () => {
 	})
 
 	it('The inner dashboard renders with the correct', () => {
-		const { getByText } = render(<CardContentTwo />)
-		let element = getByText('Orders');
+		 render(<CardContentTwo />)
+		let element = screen.getByText('Orders');
 
 		expect(element.textContent).toBe('Orders')
 		
 	})
 
-	it('It should render with latest news text', () => {
+	it('The card should render latest news text', () => {
 		render(<NewsHeader />)
 		let element = screen.getByText((content, element) => content.startsWith('Latest'))
 

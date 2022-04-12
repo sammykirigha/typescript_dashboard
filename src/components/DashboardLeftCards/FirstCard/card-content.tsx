@@ -55,14 +55,14 @@ export const CardContent:React.FC = (): JSX.Element => {
                     {options.map((option) => (
                         <option value={option.value}>{option.label}</option>
                     ))}
-                </select> 
+                </select>
 		  </CardHeader>
 		  <CardBody>
 			 <span className="visitors-number">{values}</span> 
 		  </CardBody>
 		  <CardFooter
 			  footerIcon={
-				  <ArrowForwardOutlinedIcon style={{marginLeft: '30px'}} className="footer-icon" />
+				  <ArrowForwardOutlinedIcon style={{marginLeft: '10px'}} className="footer-icon" />
 			  }
 			  linkText={"You need more visits? Contact us!"}
 		  />

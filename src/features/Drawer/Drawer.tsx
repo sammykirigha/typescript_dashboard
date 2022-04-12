@@ -12,8 +12,6 @@ import {
 } from "@mui/material";
 import  MuiDrawer from "@mui/material/Drawer";
 import { Header } from '../../components/navbar/header/Header';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { ListContainer } from '../../components/DrawComponents/list/List';
 
 const drawerWidth = 240;
@@ -33,9 +31,9 @@ const closedMixin = (theme: Theme): CSSObject => ({
 		duration: theme.transitions.duration.leavingScreen,
 	}),
 	overflowX: 'hidden',
-	width: `calc(${theme.spacing(17)} + 1px)`,
+	width: `calc(${theme.spacing(13)} + 1px)`,
 	[theme.breakpoints.up('sm')]: {
-		width: `calc(${theme.spacing(9.5)} + 1px)`
+		width: `calc(${theme.spacing(7.5)} + 1px)`
 	}
 })
 
@@ -73,6 +71,7 @@ const AppBar = styled(MuiAppBar, {
     duration: theme.transitions.duration.leavingScreen,
   }),
 	backgroundColor: 'white',
+	boxShadow: ' 0px 0px 5px 0px #000',
     color: 'black',
   ...(open && {
     marginLeft: drawerWidth,
@@ -87,17 +86,24 @@ const AppBar = styled(MuiAppBar, {
 const Drawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== 'open'})(
 	({ theme, open }) => ({
 		width: drawerWidth,
+		scrollBehavior: 'auto',
+		"&::-webkit-scrollbar": {
+		 display: "none" 
+		},
+		height: 'auto',
 		flexShrink: 0,
 		whiteSpace: 'nowrap',
 		boxSizing: 'border-box',
+		overflow: 'unset',
 		...(open && {
 			...openedMixin(theme),
-			'& .MuiDrawer-paper': openedMixin(theme)
+			'& .MuiDrawer-paper': openedMixin(theme),
+			overflow: 'auto'
 		}),
 		...(!open && {
 			...closedMixin(theme),
 			'& .MuiDrawer-paper': closedMixin(theme)
-		}),
+		})
 	}),
 )
 
@@ -141,7 +147,7 @@ export const TheDrawer: React.FC<ChildrenProps> = ({ children }): JSX.Element =>
   return (
 	  <Box style={drawerStyles}>
 		  <CssBaseline />
-		  {/* <HideOnScroll> */}
+		  <HideOnScroll>
 			  <AppBar position='fixed' open={open}>
 				  <Toolbar>
 					  <IconButton
@@ -156,7 +162,7 @@ export const TheDrawer: React.FC<ChildrenProps> = ({ children }): JSX.Element =>
 					  <Header title={"Dashboard"} linkText={"What's new"} />
 				  </Toolbar>
 			  </AppBar>
-		  {/* </HideOnScroll> */}
+		  </HideOnScroll>
 		  <Drawer variant='permanent' open={open}>
             <ListContainer handleDrawerClick={handleDrawerClose} />
 		  </Drawer>

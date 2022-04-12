@@ -4,7 +4,7 @@ import React from 'react';
 
 const cardStyle = {
 	padding: '10px',
-    maxHeight: '220px',
+    maxHeight: '100%',
     width: '100%'
 }
 

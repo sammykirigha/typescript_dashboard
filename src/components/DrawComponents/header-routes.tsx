@@ -73,28 +73,28 @@ interface OtherLinks {
         icon: <WifiTetheringIcon />,
         text: "Marketing",
         link:"/admin/marketing",
-        // children:[
-        //     {
-        //         text: "Discount codes",
-        //         link: "/admin/marketing/discount" 
-        //     },
-        //     {
-        //         text:"Exit intent",
-        //         link: "/admin/marketing/intent" 
-        //     },
-        //     {
-        //         text:"Checkout Features",
-        //         link: "/admin/marketing/features" 
-        //     },
-        //     {
-        //         text:"Post-purchase conversion",
-        //         link: "/admin/marketing/conversion" 
-        //     },
-        //     {
-        //         text:"Cart abandonment",
-        //         link: "/admin/marketing/abandonment"
-        //     },
-        // ]
+        children:[
+            {
+                text: "Discount codes",
+                link: "/admin/marketing/discount" 
+            },
+            {
+                text:"Exit intent",
+                link: "/admin/marketing/intent" 
+            },
+            {
+                text:"Checkout Features",
+                link: "/admin/marketing/features" 
+            },
+            {
+                text:"Post-purchase conversion",
+                link: "/admin/marketing/conversion" 
+            },
+            {
+                text:"Cart abandonment",
+                link: "/admin/marketing/abandonment"
+            },
+        ]
     },
     {
         icon: <LocalShippingIcon />,
