@@ -1,19 +1,10 @@
-import HomeIcon from "@mui/icons-material/Home";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import PersonIcon from "@mui/icons-material/Person";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import BrushIcon from "@mui/icons-material/Brush";
-import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
-import VerifiedIcon from "@mui/icons-material/Verified";
-import GridViewIcon from "@mui/icons-material/GridView";
-import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
-import ShareIcon from "@mui/icons-material/Share";
-import PreviewIcon from "@mui/icons-material/Preview";
-import QuizIcon from "@mui/icons-material/Quiz";
-import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
+import { FiHome, FiShoppingCart, FiUser, FiCreditCard, FiEye } from 'react-icons/fi';
+import { AiOutlineUnorderedList, } from 'react-icons/ai';
+import { MdOutlineLocalShipping, } from 'react-icons/md';
+import { BsCurrencyDollar, BsBrush, BsBullseye, BsGear, BsShare, BsQuestionCircle} from 'react-icons/bs';
+import { CgExtensionAdd } from 'react-icons/cg';
+
 
 type RouteLinks =  {
 	icon: JSX.Element;
@@ -32,45 +23,55 @@ interface OtherLinks {
 	link: string;
 }
 
+const iconStyles = {
+    height: '20px',
+    width: '20px',
+}
+
+const dashStyles = {
+    height: '20px',
+    width: '20px',
+}
+
  export const links: RouteLinks[] = [
     {
-        icon: <HomeIcon />,
+        icon: <FiHome style={dashStyles} />,
         text: "Dashboard",
         link:"/"
     },
     {
-        icon: <ShoppingCartOutlinedIcon />,
+        icon: <FiShoppingCart style={iconStyles}/>,
         text: "Catalogue",
         link: "/admin/catalogue",
-        // children: [
-        //     {
-        //         text: "Discount codes",
-        //         link: "/admin/marketing/discount" 
-        //     },
-        //     {
-        //         text:"Exit intent",
-        //         link: "/admin/marketing/intent" 
-        //     },
-        //     {
-        //         text:"Checkout Features",
-        //         link: "/admin/marketing/features" 
-        //     },
+        children: [
+            {
+                text: "Discount codes",
+                link: "/admin/marketing/discount" 
+            },
+            {
+                text:"Exit intent",
+                link: "/admin/marketing/intent" 
+            },
+            {
+                text:"Checkout Features",
+                link: "/admin/marketing/features" 
+            },
             
-        // ]
+        ]
     },
     {
-        icon: <FormatListBulletedIcon />,
+        icon: <AiOutlineUnorderedList style={iconStyles} />,
         text: "Orders",
-        badge: 12,
+        badge: 14,
         link:"/admin/orders"
     },
     {
-        icon: <PersonIcon />,
+        icon: <FiUser style={iconStyles} />,
         text: "Customers",
         link: "/admin/customers"
     },
     {
-        icon: <WifiTetheringIcon />,
+        icon: <BsBullseye style={iconStyles} />,
         text: "Marketing",
         link:"/admin/marketing",
         children:[
@@ -87,52 +88,64 @@ interface OtherLinks {
                 link: "/admin/marketing/features" 
             },
             {
-                text:"Post-purchase conversion",
+                text:"Post-purchase ",
                 link: "/admin/marketing/conversion" 
             },
             {
                 text:"Cart abandonment",
                 link: "/admin/marketing/abandonment"
             },
+             {
+                text: "Discount codes",
+                link: "/admin/marketing/discount" 
+            },
+            {
+                text:"Exit intent",
+                link: "/admin/marketing/intent" 
+            },
+            {
+                text:"Checkout Features",
+                link: "/admin/marketing/features" 
+            },
         ]
     },
     {
-        icon: <LocalShippingIcon />,
+        icon: <MdOutlineLocalShipping style={iconStyles} />,
         text: "Delivery Options",
         link: "/admin/delivery"
     },
     {
-        icon: <AttachMoneyIcon />,
+        icon: <BsCurrencyDollar style={iconStyles} />,
         text: "Payment Options",
         link: "/admin/payment"
     },
     {
-        icon: <BrushIcon />,
+        icon: <BsBrush style={iconStyles}/>,
         text: "Store Design",
         link: "/admin/store"
     },
     {
-        icon: <SubscriptionsIcon />,
+        icon: <FiCreditCard style={iconStyles}  />,
         text: "Subscribtions",
         link: "/admin/subscriptions"
     },
     {
-        icon: <VerifiedIcon />,
+        icon: <BsGear style={iconStyles} />,
         text: "Integrations",
         link: "/admin/integrations"
     },
     {
-        icon: <GridViewIcon />,
+        icon: <CgExtensionAdd style={iconStyles} />,
         text: "Extensions",
         link: "/admin/extensions"
     },
     {
-        icon: <SettingsIcon />,
+        icon: <BsGear style={iconStyles}  />,
         text: "Settings",
         link: "/admin/settings"
     },
     {
-        icon: <LogoutIcon />,
+        icon: <LogoutIcon style={iconStyles} />,
         text: "Log out",
         link: "/admin/logout"
     },
@@ -140,17 +153,17 @@ interface OtherLinks {
 
 export const otherLinks: OtherLinks[] = [
     {
-        icon: <QuizIcon />,
+        icon: <BsQuestionCircle style={iconStyles} />,
         text: "Customer Support",
         link:"/admin/support"
     },
     {
-        icon: <ShareIcon />,
+        icon: <BsShare style={iconStyles} />,
         text: "Share your shop",
         link:"/admin/share"
     },
     {
-        icon: <PreviewIcon />,
+        icon: <FiEye style={iconStyles} />,
         text: "view your shop",
         link:"/admin/shops"
     },

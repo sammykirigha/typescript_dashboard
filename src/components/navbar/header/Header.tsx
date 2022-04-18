@@ -1,8 +1,14 @@
 import React from 'react';
 import './Header.css'
 import { useLocation } from 'react-router-dom';
-import BoltOutlinedIcon from '@mui/icons-material/BoltOutlined';
 import { Badge } from '@mui/material';
+import { HiOutlineLightningBolt } from 'react-icons/hi';
+
+const iconStyles = {
+    height: '23px',
+	width: '23px',
+	color: '#103B66'
+}
 
 interface Props {
 	title: string;
@@ -16,7 +22,7 @@ export const Header: React.FC<Props> = ({ title, linkText }): JSX.Element => {
 	  <div className='header'>
 		  <span className="title">{name[2] ? name[2] : title}</span>
 		  <div className="header-left">
-			  <BoltOutlinedIcon />
+			  <HiOutlineLightningBolt style={iconStyles} />
 			  <Badge badgeContent={2} color='error'>
 				  <span className="link">{ linkText}</span>
 			  </Badge>

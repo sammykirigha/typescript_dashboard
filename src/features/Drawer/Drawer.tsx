@@ -1,5 +1,6 @@
 import { Box, CssBaseline } from '@mui/material';
-import { styled, Theme, CSSObject } from '@mui/material/styles';
+import {makeStyles, createStyles} from '@material-ui/core/styles'
+import { styled, Theme, CSSObject, } from '@mui/material/styles';
 import React from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
 import MuiAppBar, { AppBarProps as MuiAppBarProps} from '@mui/material/AppBar';
@@ -24,6 +25,23 @@ const openedMixin = (theme: Theme): CSSObject => ({
 	}),
 	overflowX: 'hidden'
 })
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+     DetailedCard: {
+            height: theme.spacing(60),
+            display: 'flex',
+            flexDirection: 'column',
+            overflow: 'scroll',
+            '&::-webkit-scrollbar': {
+             width:'0.1px'
+            },
+           '&::-webkit-scrollbar-thumb': {
+               width:'0.1px'
+            },
+        },
+  })
+);
 
 const closedMixin = (theme: Theme): CSSObject => ({
 	transition: theme.transitions.create('width', {
@@ -71,7 +89,7 @@ const AppBar = styled(MuiAppBar, {
     duration: theme.transitions.duration.leavingScreen,
   }),
 	backgroundColor: 'white',
-	boxShadow: ' 0px 0px 5px 0px #000',
+	boxShadow: 'none',
     color: 'black',
   ...(open && {
     marginLeft: drawerWidth,
@@ -107,26 +125,6 @@ const Drawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== 'open'})
 	}),
 )
 
-const Main = styled("main", {
-	shouldForwardProp: (prop) => prop !== "open"
-})<AppBarProps>(
-	({ theme, open }) => ({
-		flexGrow: 1,
-		transition: theme.transitions.create("margin", {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-		}),
-		marginLeft: `-${drawerWidth}px`,
-        ...(open && {
-            transition: theme.transitions.create("margin", {
-                easing: theme.transitions.easing.easeOut,
-                duration: theme.transitions.duration.enteringScreen,
-            }),
-            marginLeft: 0,
-        }),
-	})
-)
-
 const drawerStyles = {
     display: "flex",
     width: "100%",
@@ -136,6 +134,8 @@ const drawerStyles = {
 
 export const TheDrawer: React.FC<ChildrenProps> = ({ children }): JSX.Element => {
 	const theme = useTheme();
+
+	const classes = useStyles(theme)
 	const [open, setOpen] = React.useState(false);
 	const handleDrawerOpen = (): void => {
 		setOpen(true)
@@ -163,7 +163,7 @@ export const TheDrawer: React.FC<ChildrenProps> = ({ children }): JSX.Element =>
 				  </Toolbar>
 			  </AppBar>
 		  </HideOnScroll>
-		  <Drawer variant='permanent' open={open}>
+		  <Drawer className={classes.DetailedCard} variant='permanent' open={open}>
             <ListContainer handleDrawerClick={handleDrawerClose} />
 		  </Drawer>
 		  <Box component="main" sx={{ flexGrow: 1, p: 0 }}>

@@ -7,6 +7,12 @@
     flex-direction: column;
 }
 
+.headerIcon {
+    width: 23px;
+    height: 23px;
+    color: #103b66;
+}
+
 .orders-up {
     padding-top: 40px;
     padding-right: 10px;

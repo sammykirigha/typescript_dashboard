@@ -1,6 +1,6 @@
 import { Card } from '@mui/material';
 import './CardContentTwo.css'
-import React, { ChangeEvent, useState } from 'react';
+import React, { useState } from 'react';
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import { CardHeader } from '../../reusableCompts/cardHeader/CardHeader';
 import { CardBody } from '../../reusableCompts/cardBody/card-body';
@@ -47,7 +47,7 @@ export const CardContentTwo: React.FC = (): JSX.Element => {
 	  <Card className='card-content-two-box'>
 		  <CardHeader
 			  headerText='Orders'
-			  icon={<FormatListBulletedIcon className="icon" />}
+			  icon={<FormatListBulletedIcon className="headerIcon" />}
 		  >
 			  <select
                     onChange={ordersChange}

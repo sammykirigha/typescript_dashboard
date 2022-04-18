@@ -2,9 +2,6 @@ import { Route } from "react-router-dom";
 import { Content } from "../components/body";
 import { Hero } from "../components/navbar";
 import { Marketing, OneRoute } from "../components/reusableCompts";
-import { lazy } from 'react';
-
-// const HeroSect = lazy(() => import('../components/navbar/hero/Hero'))
 
 export const routes = [
     <Route

@@ -1,6 +1,6 @@
-import { Card, SelectChangeEvent } from '@mui/material';
+import { Card } from '@mui/material';
 import './card-content.css'
-import React, { ChangeEvent, SelectHTMLAttributes, useState } from 'react';
+import React, { ChangeEvent } from 'react';
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import { CardHeader } from '../../reusableCompts/cardHeader/CardHeader';
 import { CardBody } from '../../reusableCompts/cardBody/card-body';
@@ -44,7 +44,7 @@ export const CardContent:React.FC = (): JSX.Element => {
 	  <Card className='card-content-box'>
 		  <CardHeader
 			  headerText='Visitors'
-			  icon={<RemoveRedEyeOutlinedIcon className="icon" />}
+			  icon={<RemoveRedEyeOutlinedIcon className="headerIcon" />}
 		  >
 			 <select
                     onChange={onChange}

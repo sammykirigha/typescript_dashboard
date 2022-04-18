@@ -1,40 +1,55 @@
 
 .listitem-box {
- margin-bottom: 3px;
+ /* margin-bottom: 3px; */
 }
 
-.listitem{
+.listitem-container{
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    /* background-color: red; */
+    width: 240px;
 }
 
 .icon {
 	color: #103B66 !important;
     padding: 0px;
     margin: 0px;
+    height: 27px;
+    width: 30px;
 }
 
 .listitem-text {
-    font-family: Roboto;
+    font-family: Noto Sans HK;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    /* padding-right: 3px; */
     line-height: 16px;
     color: #21B8F9;
 }
 
-.listitem:hover {
-    border-left: 5px solid #21B8F9;
+.listitem-container:hover {
+    border-left: 3px solid #21B8F9;
+	color: #21B8F9;
 	background-color: #F7F7F7;
 } 
 
-.listitem-text:hover {
-	color: #21B8F9;
+
+.myDiv{
+display: flex;
+align-items: center;
+margin-left: 15px;
+height: 40px;
+width: 240px;
+color: #103B66
 }
 
-.icon:hover  {
-	color: #21B8F9;
+.myDiv:hover{
+    color: #21B8F9;
+}
+
+.badge {
+    margin-left: 110px !important;
+    background-color: red;
 }
 
 

@@ -5,11 +5,11 @@
     min-width: 350px;
 }
 
-/* .icon {
+.headerIcon {
     width: 23px;
     height: 23px;
     color: #103b66;
-} */
+}
 
 .visitors-number {
     padding-top: 40px;
